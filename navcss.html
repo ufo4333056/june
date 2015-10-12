@@ -1,0 +1,649 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>六月设计 JUNEZX 模板装修辅助工具2.0 POWER BY junezx</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="renderer" content="webkit">
+<link type="text/css" rel="stylesheet" href="css/a.css" />
+<link type="text/css" rel="stylesheet" href="css/b.css" />
+<link type="text/css" rel="stylesheet" href="css/c.css" />
+<link type="text/css" rel="stylesheet" href="css/d.css" />
+
+<link href="http://a.tbcdn.cn/??p/mall/base/global-v2.css,apps/tmall/header/shop/header-v2.css,apps/tmall/header/shop/head-info.css?t=20130914" rel="stylesheet" />
+<link href="http://a.tbcdn.cn/apps/taesite/platinum/stylesheet/??view/copyright-min.css,common/mods/ww-hover/default-min.css,view/layout-tmall-990-min.css,common/modules-sys-tmall-default-min.css,common/modules-other-tmall-default-min.css?t=20130217.css" rel="stylesheet" />
+<link href="http://g.tbcdn.cn/mui/??mallbar/1.0.6/mallbar.css,overlay/1.0.3/overlay.css?t=20130621173819" rel="stylesheet" charset="utf-8" />
+<link id="themeselected" rel="stylesheet" type="text/css" href="" />
+<style id="style-navGlobal">
+</style>
+<style id="style-allCats">
+</style>
+<style id="style-levelOne">
+</style>
+<style id="style-levelTwo">
+</style>
+<style id="style-levelThree">
+</style>
+<style id="style-levelFour">
+</style>
+<style>
+.navtitle{
+	height:100px;
+	line-height:100px;
+	text-indent:20px;
+	font-size:20px;
+	font-family:微软雅黑;
+	background:#f2f4f8;
+	color:#333;
+}
+.navul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	background:#f2f4f8;
+	padding-left:30px;
+	height:80px;
+}
+.navul .navli{
+	float:left;
+	background:#eee;
+	color:#333;
+	padding:20px 40px;
+	font-size:16px;
+	font-family:微软雅黑;
+	cursor:pointer;
+}
+.navul .navli.active{
+	background:#333;
+	color:#fff;
+}
+.bdian,.cdian{
+	background:#f2f4f8;
+}
+.bdian .bdianlist{
+	width:256px;
+	height:400px;
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	border:18px solid #fff;
+	border-radius: 10px;
+	cursor:pointer;
+	box-shadow: 0 0 3px rgba(0,0,0,.06), 1px 2px 15px rgba(0,0,0,.19);
+	-webkit-transition: .5s ease-in;
+	-moz-transition: .5s ease-in;
+	-o-transition: .5s ease-in;
+	transition: .5s ease-in;
+}
+.bdian .bdianlist:hover{
+	border-color:#333;
+}
+.cdian .cdianlist{
+	width:256px;
+	height:400px;
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	border:18px solid #fff;
+	border-radius: 10px;
+	cursor:pointer;
+	box-shadow: 0 0 3px rgba(0,0,0,.06), 1px 2px 15px rgba(0,0,0,.19);
+	-webkit-transition: .5s ease-in;
+	-moz-transition: .5s ease-in;
+	-o-transition: .5s ease-in;
+	transition: .5s ease-in;
+}
+.cdian .cdianlist:hover{
+	border-color:#333;
+}
+.t-tabs-li {
+	display:inline-block;
+	padding:10px 30px;
+	cursor:pointer;
+	text-align:center;
+	border:1px solid #666;
+	background:#efefef;
+}
+.t-tabs-li:hover {
+	background:#dfdfdf;
+}
+.t-tabs-li.active {
+	background:#333;
+	color:#fff;
+	border-color:#333;
+}
+#returnFirst{
+	padding:10px 30px;
+	font-size:14px;
+	background:#333;
+	display:block;
+	width:70px;
+	float:right;
+	position:relative;
+	top:-70px;
+	right:40px;
+	border:1px #111 solid;
+	cursor:pointer;
+	color:#fff;
+}
+#navContent{
+	background:#f2f4f8;
+}
+.mapform{
+	margin:20px 15px;
+	clear:both;
+}
+.mapform .formele{
+	font-size:14px;
+	height:40px;
+	line-height:40px;
+	margin-top:5px;
+	width:475px;
+	float:left;
+}
+.mapform .formele .formlabel{
+	float: left;
+	display:block;
+	width:120px;
+}
+.mapform .formele .forminput{
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px #c2ced6 solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	float: left;
+	margin-left:10px;
+}
+.mapform .formele .formselect{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px #c2ced6 solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	float: left;
+	margin-left:10px;
+}
+
+#chooseLeverForBorder {
+    display: block;
+	background-color:rgba(255,255,255,0.4);
+    border:3px solid rgba(0,0,0,0.6);
+    position:absolute;
+	z-index: 999;
+}
+
+</style>
+</head>
+<body style="width:1002px;margin:0 auto;background:url(images/navcss/bgnavcss.jpg) top center;">
+	<div id="tMessage"></div>
+	<div id="hd" style="position:relative;z-index:1100;">
+		<div id="logo"><a href="http://junezx.com" target="_blank" style="display:block;width:100%;height:100%;"></a></div>
+		<div id="topbanner">
+			<div id="login"><i></i>登录</div>
+			<div id="loginText"><span id="loginTextName"></span>，欢迎登录！<span id="logout"  data-target="login-clicked" data-loginType="logout"><i></i>注销</span><span id="tSaveListBtn"><i></i>保存样式列表</span></div>
+			<div id="reg"><i></i>注册</div>
+			<div id="moretools" data-tools="nav" style="right:200px;"></div>
+			<div id="save" style="right:122px;"></div>
+			<div id="makecode" data-target="coded" data-codeType="codeExport" style="right:16px;"></div>
+		</div>
+	</div>
+	<div id="userdialog" title="六月设计客户登录/注册" style="display:none;">
+		<div id="usertabs">
+			<ul>
+				<li><a href="#logintab">登录</a></li>
+				<li><a href="#regtab">注册</a></li>
+			</ul>
+			<div id="logintab">
+				<ul class="setform">
+					<li>
+						<label for="username">用户名：</label>
+						<input id="username" class="setinput" type="text">
+					</li>
+					<li>
+						<label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+						<input id="password" class="setinput" type="password">
+					</li>
+				</ul>
+			</div>
+			<div id="regtab">
+				<ul class="setform">
+					<li>
+						<label for="rusername">用户名：</label>
+						<input id="rusername" class="setinput" type="text">
+					</li>
+					<li>
+						<label for="rpassword">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+						<input id="rpassword" class="setinput" type="password">
+					</li>
+					<li>
+						<label for="rpassword2">再次输入密码：</label>
+						<input id="rpassword2" class="setinput" type="password">
+					</li>
+					<li>
+						<label for="rlicense">注册码：</label>
+						<input id="rlicense" class="setinput" type="text" title="请联系 junezx 的旺旺客服获取注册码">
+						<a class="lianxi" href="http://amos.alicdn.com/getcid.aw?v=2&uid=junezx&site=cntaobao&s=2&groupid=0&charset=utf-8" target="_blank"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="bd" style="position:relative;top:0px;background:#f2f4f8;">
+		<div class="navtitle">⊙ 第一步：请选择您当前所使用的模板</div><span id="returnFirst" style="display:none;">返回上一步</span>
+		<div id="navChoose" data-choose= "">
+			<ul class="navul">
+				<li class="navli active">商城店铺</li>
+				<li class="navli">集市店铺</li>
+			</ul>
+			<div class="bdian">
+				<div class="navtheme bdianlist" data-num="0" data-default="default" style="background:url(http://img02.taobaocdn.com/L1/142/404201196/assets/images/index.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme bdianlist" data-num="1" data-default="default" style="background:url(http://img04.taobaocdn.com/tfscom/i1/T1QfaLFnlbXXb1upjX_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme bdianlist" data-num="2" data-default="default" style="background:url(http://img01.taobaocdn.com/L1/142/405296613/assets/images/s1.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme bdianlist" data-num="3" data-default="b" style="background:url(http://img02.taobaocdn.com/L1/142/410446650/assets/images/index.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme bdianlist" data-num="4" data-default="default" style="background:url(http://img04.taobaocdn.com/L1/142/412650297/assets/images/default-thumbnail.png_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme bdianlist" data-num="5" data-default="default" style="background:url(http://img03.taobaocdn.com/L1/142/414199356/assets/images/default-thumbnail.png_400x400.jpg) center center no-repeat;"></div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="cdian" style="display:none;">
+				<div class="navtheme cdianlist" data-num="6" data-default="default" style="background:url(http://img01.taobaocdn.com/L1/142/411525092/assets/images/index.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="7" data-default="blue" style="background:url(http://img04.taobaocdn.com/tfscom/i3/T1Dxj4FeVfXXb1upjX_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="8" data-default="default" style="background:url(http://img03.taobaocdn.com/tfscom/i3/T1hqIiFvJdXXb1upjX_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="9" data-default="coffee" style="background:url(http://img04.taobaocdn.com/L1/142/402038163/assets/images/d.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="10" data-default="blue" style="background:url(http://img03.taobaocdn.com/L1/142/402739059/assets/images/s.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="11" data-default="blue" style="background:url(http://img02.taobaocdn.com/L1/142/402930380/assets/images/a.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div class="navtheme cdianlist" data-num="12" data-default="blue" style="background:url(http://img03.taobaocdn.com/L1/142/403494111/assets/images/default-thumbnail.jpg_400x400.jpg) center center no-repeat;"></div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<div id="navContent" style="display:none;">
+			<div id="nchd" style="margin-bottom:0px;background:#ea4a3e;margin-top:43px;padding-top:4px;">
+				<div class="layout grid-m J_TLayout" data-id="183" data-widgetid="183" data-prototypeid="23" data-componentid="23" style="margin-left:0px;">
+					<div class="col-main">
+						<div class="main-wrap J_TRegion" data-modules="main" data-width="h990">
+							<div class="J_TModule " data-id="1329" data-widgetid="1329" data-componentid="5002" data-prototypeid="5002" data-isedit="0" data-ismove="1" data-isdel="1" data-uri="#" data-width="670px" data-render="/module/preview/dhcs/tshop-pbsm-shop-nav-ch/1329/" id="shop1329">
+								<div class="skin-box tb-module tshop-pbsm tshop-pbsm-shop-nav-ch" style="display: block; visibility: visible; "> <s class="skin-box-tp"><b></b></s>
+									<div class="skin-box-bd">
+										<div class="all-cats popup-container" id="ncAllCats">
+											<div class="all-cats-trigger popup-trigger"> <a class="link" href="javascript:void(0);" data-spm-anchor-id="0.0.0.0"> <span class="title" id="cbTitle"> 本店所有商品 </span> <i class="popup-icon"></i> </a> </div>
+										</div>
+										<ul class="menu-list" id="levelOne">
+											<li class="menu"> <a class="link" href="javascript:void(0);"><span class="title">首页</span></a> </li>
+											<li class="menu menu-selected"> <a href="javascript:void(0);" class="link"><span class="title">店铺动态</span></a> </li>
+											<li class="menu"> <a class="link" href="javascript:void(0);"><span class="title">一级菜单</span></a> </li>
+											<li data-page-id="12459526" class="menu menu-hover"> <a href="javascript:void(0);" class="link"><span class="title">下拉主分类</span><i class="popup-icon" ></i></a> </li>
+										</ul>
+									</div>
+									<s class="skin-box-bt"><b></b></s> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tshop-pbsm-shop-nav-ch">
+				<div class="skin-box-bd" style="width: 990px; height: 300px; position:relative;background:none;">
+					<div class="popup-content all-cats-popup ks-popup ks-overlay ks-ext-position ks-popup-hidden ks-overlay-hidden" style="visibility: hidden; z-index: 2; left: 0px; top: 0px;visibility: visible; " aria-disabled="false">
+						<div class="ks-contentbox">
+							<div class="popup-inner">
+								<ul class="J_TAllCatsTree cats-tree" id="levelTwo">
+									<li class="cat fst-cat cat-hd-hover">
+										<h4 class="cat-hd fst-cat-hd has-children"> <i class="cat-icon fst-cat-icon"></i> <a href="javascript:void(0);" class="cat-name fst-cat-name">所有宝贝</a> </h4>
+										<div class="snd-pop ks-popup ks-overlay ks-ext-position ks-popup-hidden ks-overlay-hidden" style="visibility: visible; z-index: 2; left: 188px; top: 0px; " aria-disabled="false">
+											<div class="ks-contentbox" id="levelThree">
+												<div class="snd-pop-inner">
+													<ul class="fst-cat-bd">
+														<li class="cat snd-cat">
+															<h4 class="cat-hd snd-cat-hd"> <i class="cat-icon snd-cat-icon"></i> <a href="javascript:void(0);" class="by-label by-sale snd-cat-name">按销量</a> </h4>
+															<h4 class="cat-hd snd-cat-hd"> <i class="cat-icon snd-cat-icon"></i> <a href="javascript:void(0);" class="by-label by-new snd-cat-name">按新品</a> </h4>
+															<h4 class="cat-hd snd-cat-hd"> <i class="cat-icon snd-cat-icon"></i> <a href="javascript:void(0);" class="by-label by-price snd-cat-name">按价格</a> </h4>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="cat fst-cat">
+										<h4 class="cat-hd fst-cat-hd has-children"> <i class="cat-icon fst-cat-icon  active-trigger"></i> <a class="cat-name fst-cat-name" href="javascript:void(0);">父分类1</a> </h4>
+									</li>
+									<li class="cat fst-cat">
+										<h4 class="cat-hd fst-cat-hd has-children"> <i class="cat-icon fst-cat-icon  active-trigger"></i> <a class="cat-name fst-cat-name" href="javascript:void(0);">按价格分类</a> </h4>
+									</li>
+									<li class="cat fst-cat">
+										<h4 class="cat-hd fst-cat-hd has-children"> <i class="cat-icon fst-cat-icon  active-trigger"></i> <a class="cat-name fst-cat-name" href="javascript:void(0);">安静淘宝。。。</a> </h4>
+									</li>
+									<li class="cat fst-cat">
+										<h4 class="cat-hd fst-cat-hd has-children"> <i class="cat-icon fst-cat-icon  active-trigger"></i> <a class="cat-name fst-cat-name" href="javascript:void(0);">我是父亲分类</a> </h4>
+										<div class="snd-pop">
+											<div class="snd-pop-inner">
+												<ul class="fst-cat-bd">
+													<li class="cat snd-cat">
+														<h4 class="cat-hd snd-cat-hd"> <i class="cat-icon snd-cat-icon"></i> <a class="cat-name snd-cat-name" href="javascript:void(0);"> 2 </a> </h4>
+													</li>
+													<li class="cat snd-cat">
+														<h4 class="cat-hd snd-cat-hd"> <i class="cat-icon snd-cat-icon"></i> <a class="cat-name snd-cat-name" href="javascript:void(0);"> 3 </a> </h4>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="popup-content" style="visibility: visible; z-index: 99; left: 401px; top: 0px; " aria-disabled="false">
+						<div class="ks-contentbox">
+							<ul class="menu-popup-cats" id="levelFour" data-mouse=".popup-content .menu-popup-cats" data-title="分类弹出菜单-背景">
+								<li class="sub-cat" data-mouse=".menu-popup-cats .sub-cat" data-hover="sub-cat-hover" data-title="分类弹出菜单-菜单项"><a href="javascript:void(0);" class="cat-name" data-mouse=".menu-popup-cats .sub-cat a.cat-name" data-title="分类弹出菜单-菜单项链接">船袜短袜</a></li>
+								<li class="sub-cat sub-cat-hover" data-hover-clz=".menu-popup-cats .sub-cat-hover" data-title="分类弹出菜单-选中菜单项"><a data-mouse=".menu-popup-cats .sub-cat a.cat-name" data-hover-clz=".menu-popup-cats .sub-cat-hover a.cat-name" data-hover="sub-cat-hover" data-title="分类弹出菜单-选中菜单项链接" href="javascript:void(0);" class="cat-name" data-spm-anchor-id="a1z10.1.0.708">丝袜/网袜</a></li>
+								<li class="sub-cat" data-hover="sub-cat-hover"><a href="javascript:void(0);" class="cat-name">春季连裤袜</a></li>
+								<li class="sub-cat" data-hover="sub-cat-hover"><a href="javascript:void(0);" class="cat-name">安全裤</a></li>
+								<li class="sub-cat" data-hover="sub-cat-hover"><a href="javascript:void(0);" class="cat-name">裹胸</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="t-tabs" id="tNavSettings">
+					<ul>
+						<li class="t-tabs-li active">导航条设置</li>
+						<li class="t-tabs-li">全部分类</li>
+						<li class="t-tabs-li">横排主分类</li>
+						<li class="t-tabs-li">一级下拉菜单</li>
+						<li class="t-tabs-li">二级下拉菜单</li>
+						<li class="t-tabs-li">三级下拉菜单</li>
+						<li style="display:inline-block">
+							<select id="forDefaultStyle" style="width:200px;height:40px;line-height:40px;padding:10px;">
+								<option value="">您可以选择一个预设样式</option>
+								<option value="0">预设样式黑色</option>
+							</select>
+						</li>
+					</ul>
+					<form id="formNavSettings">
+					<div id="dlg-navcss-navGlobal" class="t-tabs-settings">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">导航背景色</span>
+								<input class="forminput tColorPicker" type="text" id="navGlobalBg" data-navType="navGlobal" name="navGlobalBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">导航高度</span>
+								<input class="forminput" type="text" id="navGlobalHeight" data-navType="navGlobal" name="navGlobalHeight" value="30" />
+							</div>
+						</div>
+					</div>
+					
+					<div id="dlg-navcss-allCats" class="t-tabs-settings" style="display:none;">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">背景色</span>
+								<input class="forminput tColorPicker" type="text" id="allCatsBg" data-navType="all" name="allCatsBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过背景色</span>
+								<input class="forminput tColorPicker" type="text" id="allCatsBgHover" data-navType="all" name="allCatsBgHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="allCatsFontColor" data-navType="all" name="allCatsFontColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="allCatsFontColorHover" data-navType="all" name="allCatsFontColorHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体</span>
+								<select class="formselect" id="allCatsFontFamily" data-navType="all" name="allCatsFontFamily">
+									<option value="宋体" selected="selected">宋体</option>
+									<option value="黑体">黑体</option>
+									<option value="微软雅黑">雅黑</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体大小</span>
+								<input class="forminput" type="text" id="allCatsFontSize" data-navType="all" name="allCatsFontSize" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体样式</span>
+								<select class="formselect" id="allCatsFontStyle" data-navType="all" name="allCatsFontStyle">
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"none"'>正常</option>
+									<option value='"font-weight":"bold", "font-style":"normal", "text-decoration":"none"' selected="selected">粗体</option>
+									<option value='"font-weight":"normal", "font-style":"italic", "text-decoration":"none"'>斜体</option>
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"underline"'>下划线体</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">宽度</span>
+								<input class="forminput" type="text" id="allCatsWidth" data-navType="all" name="allCatsWidth" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">下拉图标</span>
+								<input class="forminput" type="text" id="allCatsIcon" data-navType="all" name="allCatsIcon" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">鼠标经过下拉图标</span>
+								<input class="forminput" type="text" id="allCatsIconHover" data-navType="all" name="allCatsIconHover" value="" />
+							</div>
+						</div>
+					</div>
+					
+					<div id="dlg-navcss-levelOne" class="t-tabs-settings"  style="display:none;">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelOneBg" data-navType="levelOne" name="levelOneBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelOneBgHover" data-navType="levelOne" name="levelOneBgHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelOneFontColor" data-navType="levelOne" name="levelOneFontColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelOneFontColorHover" data-navType="levelOne" name="levelOneFontColorHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体</span>
+								<select class="formselect" id="levelOneFontFamily" data-navType="levelOne" name="levelOneFontFamily">
+									<option value="宋体" selected="selected">宋体</option>
+									<option value="黑体">黑体</option>
+									<option value="微软雅黑">雅黑</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体大小</span>
+								<input class="forminput" type="text" id="levelOneFontSize" data-navType="levelOne" name="levelOneFontSize" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体样式</span>
+								<select class="formselect" id="levelOneFontStyle" data-navType="levelOne" name="levelOneFontStyle">
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"none"'>正常</option>
+									<option value='"font-weight":"bold", "font-style":"normal", "text-decoration":"none"' selected="selected">粗体</option>
+									<option value='"font-weight":"normal", "font-style":"italic", "text-decoration":"none"'>斜体</option>
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"underline"'>下划线体</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div id="dlg-navcss-levelTwo" class="t-tabs-settings"  style="display:none;">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoBg" data-navType="levelTwo" name="levelTwoBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoBgHover" data-navType="levelTwo" name="levelTwoBgHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoFontColor" data-navType="levelTwo" name="levelTwoFontColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoFontColorHover" data-navType="levelTwo" name="levelTwoFontColorHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体</span>
+								<select class="formselect" id="levelTwoFontFamily" data-navType="levelTwo" name="levelTwoFontFamily">
+									<option value="宋体" selected="selected">宋体</option>
+									<option value="黑体">黑体</option>
+									<option value="微软雅黑">雅黑</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体大小</span>
+								<input class="forminput" type="text" id="levelTwoFontSize" data-navType="levelTwo" name="levelTwoFontSize" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体样式</span>
+								<select class="formselect" id="levelTwoFontStyle" data-navType="levelTwo" name="levelTwoFontStyle">
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"none"' selected="selected">正常</option>
+									<option value='"font-weight":"bold", "font-style":"normal", "text-decoration":"none"'>粗体</option>
+									<option value='"font-weight":"normal", "font-style":"italic", "text-decoration":"none"'>斜体</option>
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"underline"'>下划线体</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">菜单宽度</span>
+								<input class="forminput" type="text" id="levelTwoWidth" data-navType="levelTwo" name="levelTwoWidth" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">菜单高度</span>
+								<input class="forminput" type="text" id="levelTwoHeight" data-navType="levelTwo" name="levelTwoHeight" value="30" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">下边线</span>
+								<input class="formradio" type="radio" data-navType="levelTwo" name="levelTwoBLMode" value="1" />显示
+								<input class="formradio" type="radio" data-navType="levelTwo" name="levelTwoBLMode" value="0" />不显示
+							</div>
+							<div class="formele">
+								<span class="formlabel">下边线颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoBLColor" data-navType="levelTwo" name="levelTwoBLColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">下边线样式</span>
+								<input class="formradio" type="radio" data-navType="levelTwo" name="levelTwoBLSType" value="solid" />实线
+								<input class="formradio" type="radio" data-navType="levelTwo" name="levelTwoBLSType" value="dotted" />虚线
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过下边线颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelTwoBLColorHover" data-navType="levelTwo" name="levelTwoBLColorHover" value="" />
+							</div>
+						</div>
+					</div>
+					
+					<div id="dlg-navcss-levelThree" class="t-tabs-settings" style="display:none;">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelThreeBg" data-navType="levelThree" name="levelThreeBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelThreeBgHover" data-navType="levelThree" name="levelThreeBgHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelThreeFontColor" data-navType="levelThree" name="levelThreeFontColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelThreeFontColorHover" data-navType="levelThree" name="levelThreeFontColorHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体</span>
+								<select class="formselect" id="levelThreeFontFamily" data-navType="levelThree" name="levelThreeFontFamily">
+									<option value="宋体" selected="selected">宋体</option>
+									<option value="黑体">黑体</option>
+									<option value="微软雅黑">雅黑</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体大小</span>
+								<input class="forminput" type="text" id="levelThreeFontSize" data-navType="levelThree" name="levelThreeFontSize" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体样式</span>
+								<select class="formselect" id="levelThreeFontStyle" data-navType="levelThree" name="levelThreeFontStyle">
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"none"' selected="selected">正常</option>
+									<option value='"font-weight":"bold", "font-style":"normal", "text-decoration":"none"'>粗体</option>
+									<option value='"font-weight":"normal", "font-style":"italic", "text-decoration":"none"'>斜体</option>
+									<option value='"font-weight":"normal", "font-style":"normal", "text-decoration":"underline"'>下划线体</option>
+								</select>
+							</div>
+							<div class="formele">
+								<span class="formlabel">菜单宽度</span>
+								<input class="forminput" type="text" id="levelThreeWidth" data-navType="levelThree" name="levelThreeWidth" value="168" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">菜单高度</span>
+								<input class="forminput" type="text" id="levelThreeHeight" data-navType="levelThree" name="levelThreeHeight" value="30" />
+							</div>
+						</div>
+					</div>
+					
+					<div id="dlg-navcss-levelFour" class="t-tabs-settings" style="display:none;">
+						<div class="mapform">
+							<div class="formele">
+								<span class="formlabel">背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelFourBg" data-navType="levelFour" name="levelFourBg" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过背景色</span>
+								<input class="forminput tColorPicker" type="text" id="levelFourBgHover" data-navType="levelFour" name="levelFourBgHover" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelFourFontColor" data-navType="levelFour" name="levelFourFontColor" value="" />
+							</div>
+							<div class="formele">
+								<span class="formlabel">划过字体颜色</span>
+								<input class="forminput tColorPicker" type="text" id="levelFourFontColorHover" data-navType="levelFour" name="levelFourFontColorHover" value="" />
+							</div>
+						</div>
+					</div>
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div id="tSaveList" title="保存列表" style="display:none;">
+		<ul>
+			
+		</ul>
+		<div id="tSavePage" style="width:400px;height:40px;"></div>
+	</div>
+	
+	<div  id="codeDiv" class="easyui-dialog" title="代码生成" style="display:none;width:600px;height:480px;padding:10px;"
+data-options="modal:true"><textarea class="codeText" style="border:none;width:510px;height:310px;"></textarea></div>
+	
+	<div id="ft" style="position:relative;height:40px;">
+	</div>
+
+<script type="text/javascript" src="js/b.js"></script>
+<script type="text/javascript" src="js/c.js"></script>
+<script type="text/javascript" src="js/d.js"></script>
+<script type="text/javascript" src="js/f.js"></script>
+<script type="text/javascript" src="js/n.js"></script>
+<script type="text/javascript" src="js/q.js"></script>
+<!--更多工具-->
+<script type="text/javascript" src="js/moretools.js"></script>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253542339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253542339' type='text/javascript'%3E%3C/script%3E"));
+$(function(){
+	$("#cnzz_stat_icon_1253542339").css("display","none");
+});
+</script>
+</body>

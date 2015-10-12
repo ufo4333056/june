@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>六月设计 JUNEZX 模板装修辅助工具2.0 POWER BY junezx</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="renderer" content="webkit">
+<link type="text/css" rel="stylesheet" href="css/a.css" />
+<link type="text/css" rel="stylesheet" href="css/b.css" />
+<link type="text/css" rel="stylesheet" href="css/c.css" />
+<link type="text/css" rel="stylesheet" href="css/d.css" />
+<style>
+#btngroup .t-icon-4 .appicon{
+	background-image: url(jdtool/css/img/jddd.png);
+	background-position:0 0;
+}
+#btngroup .t-icon-4:hover .appicon{
+	background-image: url(jdtool/css/img/jdddhover.png);
+	background-position:0 0;
+}
+.t-wang-big {
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align:text-bottom;
+	background-image:none;
+	background-image:url(http://img11.360buyimg.com/cms/jfs/t178/256/1813232753/1764/65e61eb7/53bb963cN9e35752b.gif);
+}
+.t-wang-small {	
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align:text-bottom;
+	background-image:none;
+	background-image:url(http://img11.360buyimg.com/cms/jfs/t178/256/1813232753/1764/65e61eb7/53bb963cN9e35752b.gif);
+}
+</style>
+</head>
+<body style="overflow:hidden;">
+	<div id="hd">
+		<div id="logo"><a href="http://junezx.com" target="_blank" style="display:block;width:100%;height:100%;"></a></div>
+		<div id="topbanner">
+			<div id="login"><i></i>登录</div>
+			<div id="loginText">
+				<span id="loginTextName"></span>，欢迎登录！<span id="logout" data-target="login-clicked" data-loginType="logout"><i></i>注销</span>
+				<span id="tSaveListBtn"><i></i>保存列表</span>
+				<span id="tSaveUsedSwitchBtn" status="open">关闭自动保存</span>
+				<span id="autoSaveCountdown" style="display:none;"></span>
+			</div>
+			<div id="reg"><i></i>注册</div>
+			<div id="save"></div>
+			<div id="moretools" data-tools="jdtool"></div>
+			<div id="kbhelp"></div>
+			<div id="xifuconfig"></div>
+			<div id="makecode" data-target="coded" data-codeType="codeExport"></div>
+			<div id="importcode" data-target="coded" data-codeType="codeImport"></div>
+			<div id="preview" data-target="coded" data-codeType="codePreview"></div>
+		</div>
+	</div>
+    <div  id="courseStep1" style="z-index: 1103;position: absolute; width: 223px;height: 79px;background: url(http://img03.taobaocdn.com/imgextra/i3/39767794/TB2H1.IaFXXXXcWXXXXXXXXXXXX_!!39767794.png);top: 310px;left: 60px;"><div data-target="course" data-courseType="1" style="width:66px;height:24px;position:absolute;top:40px;left:82px;cursor:pointer;"></div></div>
+	<div id="sidemenu">
+		<div id="mouseaction">
+			<div title="鼠绘热区（Ctrl+M）" class="sidebutton shuhui selected" data-target="selected" data-curType="draw"></div>
+			<div title="应用框选（Ctrl+U）" class="sidebutton kuangxuan" data-target="selected" data-curType="select"></div>
+			<div title="放大显示" class="sidebutton fangda" data-target="zoom-clicked" data-zoomType="out" style="display:none;"></div>
+			<div title="缩小显示" class="sidebutton suoxiao" data-target="zoom-clicked" data-zoomType="in" style="display:none;"></div>
+			<div title="禁止鼠标拖动应用" class="sidebutton tuodong selected" data-target="checked" data-curType="drag"></div>
+		</div>
+		<div id="configgroup">
+			<div title="添加应用" class="sidebutton yingyong selected"></div>
+			<div title="模块设置" class="sidebutton shezhi" data-target="module-clicked" data-moduleType="set"></div>
+			<div title="清空内容" class="sidebutton shuaxin" data-target="module-clicked" data-moduleType="clear"></div>
+			<div title="添加自定义HTML" class="sidebutton daima" data-target="module-clicked" data-moduleType="addCustom"></div>
+			<div title="有趣的效果组合案例" class="sidebutton zuhe" data-target="interest-clicked" data-interestType="get"></div>
+			<div title="联系我们" class="sidebutton lianxiwo"><a class="june-preview" target="_blank" href="http://amos.alicdn.com/getcid.aw?v=2&uid=junezx&site=cntaobao&s=2&groupid=0&charset=utf-8" style="display:block;width:70px;height:55px;"></a></div>
+			<div title="展开/收起面板" class="sidebutton shensuo"></div>
+		</div>
+	</div>
+	<div id="leftpannel">
+		<div id="btngroup">
+			<div id="applist">
+				<div class="appbtn-x t-icon-1" data-target="clicked" data-actType="jspb"><span class="appicon"></span>特效层</div>
+				<div class="appbtn-x t-icon-2" data-target="clicked" data-actType="jsb"><span class="appicon"></span>店内搜索</div>
+				<div class="appbtn-x t-icon-3" data-target="clicked" data-actType="job"><span class="appicon"></span>正反面图片</div>
+				<div class="appbtn-x t-icon-4" data-target="clicked" data-actType="jwb"><span class="appicon"></span>京东咚咚</div>
+				<div class="appbtn-x t-icon-5" data-target="clicked" data-actType="jcb"><span class="appicon"></span>文字</div>
+				<div class="appbtn-x t-icon-5" data-target="clicked" data-actType="jdlb"><span class="appicon"></span>段落</div>
+				<div class="appbtn-x t-icon-6" data-target="clicked" data-actType="jcdb"><span class="appicon"></span>倒计时</div>
+				<div class="appbtn-x t-icon-7" data-target="clicked" data-actType="jvb"><span class="appicon"></span>视频</div>
+				<div class="appbtn-x t-icon-9" data-target="clicked" data-actType="jfsb"><span class="appicon"></span>焦点轮播</div>
+				<div class="appbtn-x t-icon-11" data-target="clicked" data-actType="jab"><span class="appicon"></span>关注</div>
+				<!-- 
+				<div class="appbtn-x t-icon-8" data-target="clicked" data-actType="jsdb"><span class="appicon"></span>图片轮播</div>
+				<div class="appbtn-x t-icon-3" data-target="clicked" data-actType="jbob"><span class="appicon"></span>切片正反面</div>
+				<div class="appbtn-x t-icon-10" data-target="clicked" data-actType="jib"><span class="appicon"></span>宝贝列表</div>
+				<div class="appbtn-x t-icon-10" data-target="clicked" data-actType="jibList" style="display:none;"><span class="appicon"></span>添加宝贝1</div>
+				<div class="appbtn-x t-icon-12" data-target="clicked" data-actType="jfb"><span class="appicon"></span>分享</div>
+				<div class="appbtn-x t-icon-13" data-target="clicked" data-actType="jgb"><span class="appicon"></span>购物车</div>
+				<div class="appbtn-x t-icon-11" data-target="clicked" data-actType="jscb"><span class="appicon"></span>收藏</div>
+				<div class="appbtn-x t-icon-11" data-target="clicked" data-actType="jxhb"><span class="appicon"></span>喜欢</div>
+				<div class="appbtn-x t-icon-14" data-target="clicked" data-actType="jeb"><span class="appicon"></span>二维码</div> -->
+				<div class="appbtn-x t-icon-15" data-target="clicked" data-actType="jtsb"><span class="appicon"></span>滚动文字</div>
+				<!-- <div class="appbtn-x t-icon-16" data-target="clicked" data-actType="jpb"><span class="appicon"></span>弹出层</div>
+				<div class="appbtn-x t-icon-17" data-target="clicked" data-actType="jsfb"><span class="appicon"></span>店铺分类</div>
+				<div class="appbtn-x t-icon-18" data-target="clicked" data-actType="jacb"><span class="appicon"></span>可关闭层</div>
+				<div class="appbtn-x t-icon-19" data-target="clicked" data-actType="jkgb"><span class="appicon"></span>开关灯</div>
+				<div class="appbtn-x t-icon-20" data-target="clicked" data-actType="jzzb"><span class="appicon"></span>遮罩层</div> -->
+				<div class="appbtn-x t-icon-21" data-target="clicked" data-actType="jmdb"><span class="appicon"></span>锚点</div>
+			</div>
+			<div id="moduleset" style="display:none;">
+				<div class="setinput">
+					<label for="moduleWidth">模块宽度：</label>
+					<input type="text" id="moduleWidth" name="moduleWidth" value="1920" class="textinput"/>
+				</div>
+				<div class="setinput">
+					<label for="moduleHeight">模块高度：</label>
+					<input type="text" id="moduleHeight" name="moduleHeight" value="2560" class="textinput"/>
+				</div>
+				<div class="setinput">
+					<label for="moduleBgimg">模块背景图片：</label>
+					<input type="text" id="moduleBgimg" name="moduleBgimg" class="textinput"/>
+					
+					<input type="checkbox" id="boxRepeat" name="boxRepeat" value="" checked="">
+					<label class="chkLabel" for="boxRepeat" style="font-size:12px;">平铺</label>
+					<input type="checkbox" id="boxFixed" name="boxFixed" value="">
+					<label class="chkLabel" for="boxFixed" style="font-size:12px;">固定</label>
+				</div>
+				<div class="setinput">
+					<label for="bgPosition">背景图片位置：</label>
+					<select id="bgPosition" name="bgPosition">
+						<option value="50% 50%">居中</option>
+						<option value="50% 0%" selected="selected">中上</option>
+						<option value="50% 100%">中下</option>
+						<option value="0% 0%">左上</option>
+						<option value="0% 50%">左中</option>
+						<option value="0% 100%">左下</option>
+						<option value="100% 0%">右上</option>
+						<option value="100% 50%">右中</option>
+						<option value="100% 100%">右下</option>
+					</select>
+				</div>
+				<div class="setinput">
+					<label for="moduleBgcolor">模块背景颜色：</label>
+					<input type="text" id="moduleBgcolor" name="moduleBgcolor" class="textinput"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="leftconsole">
+		<div id="danlie"></div>
+		<div id="shuanglie"></div>
+	</div>
+	<div id="bd">
+		<div id="box">
+			<div id="junebox" style="overflow:auto;position:absolute;left:50px;top:50px;">
+				<div id="june" style="height:2560px;width:1920px;background: #f2f4f8 none repeat scroll 50% 0%;"></div>
+				<div id="dump" style="height:2560px;width:1920px;display:none;"></div>
+				<div id="popupContent" style="height:2560px;width:1920px;display:none;"></div>
+			</div>
+		</div>
+		<div id="rightpannel">
+			<div id="dqpannel">
+				<div id="dqtitle"><span class="rshousuo"></span></div>
+				<div id="dqbox">
+					<div class="dqbtn" style="padding-top:5px;height:36px;">
+						<div id="zdq" title="左对齐" class="dqbutton" data-target="align-clicked" data-alignType="left" style="background-position:-2px 0px;margin-left:11px;"></div>
+						<div id="ydq" title="右对齐" class="dqbutton" data-target="align-clicked" data-alignType="right" style="background-position:-51px 0px;margin-top:10px;"></div>
+						<div id="sdq" title="上对齐" class="dqbutton" data-target="align-clicked" data-alignType="top" style="background-position:-80px 0px;margin-top:10px;"></div>
+						<div id="xdq" title="下对齐" class="dqbutton" data-target="align-clicked" data-alignType="bottom" style="background-position:-127px 0px;margin-top:10px;"></div>
+						<div id="hjzdq" title="横向居中对齐" class="dqbutton" data-target="align-clicked" data-alignType="HorizontalMiddle" style="background-position:-104px 0px;"></div>
+						<div id="zjzdq" title="纵向居中对齐" class="dqbutton" data-target="align-clicked" data-alignType="VerticalMiddle" style="background-position:-28px 0px;"></div>
+					</div>
+					<div class="dqinput" style="padding-top:10px;">
+						<label for="jianju">间距</label><input type="text" name="jianju" id="jianju"> px
+					</div>
+					<div class="plbtn" style="margin-top:5px;">
+						<span id="plx" data-target="align-clicked" data-alignType="HorizontalRange">横向排列</span>
+						<span id="ply" data-target="align-clicked" data-alignType="VerticalRange" style="margin-left:0px;">纵向排列</span>
+					</div>
+				</div>
+			</div>
+			<div id="tcpannel">
+				<div id="tctitle"><span class="rshousuo"></span></div>
+				<ul id="tclist">
+				</ul>
+				<ul id="dumplayer" style="display:none;">
+				</ul>
+			</div>
+			<div id="acpannel">
+				<div id="actitle"><span class="rshousuo"></span></div>
+				<ul id="aclist"></ul>
+			</div>
+		</div>
+	</div>
+	<div id="xifupannel" class="ui-dialog" style="position:absolute;z-index:1102;width:486px;background:#fff;right:57px;left:auto;top:50px;border:1px #e0e0e0 solid;display:none;">
+		<ul class="setform">
+			<li>
+				<label for="xifuswitch">智能吸附开关： </label>
+				<div id="xifuswitch">
+					<input type="radio" id="xifuswitch1" name="xifus" value="1" /><label for="xifuswitch1" title="开启智能吸附功能">开启</label>
+					<input type="radio" id="xifuswitch2" checked="checked" name="xifus" value="0" /><label title="关闭智能吸附功能" for="xifuswitch2">关闭</label>
+				</div>
+			</li>
+			<li>
+				<label for="xifujuli">触发吸附的距离： </label>
+				<input id="xifujuli" class="setinput" type="text" title="拖动应用时，两个应用的间距在这个范围内将触发自动吸附。（数值越小，吸附的效果越不明显。）" value="5">
+			</li>
+			<li>
+				<label for="xifujianju">吸附时的间距： </label>
+				<input id="xifujianju" class="setinput" type="text" title="拖动应用时，当两个应用靠近，自动吸附的间距。（例：输入0吸附时则会贴边，输入10吸附时则会保留10px的间距吸附。）" value="0">
+			</li>
+		</ul>
+		<div class="ui-dialog-buttonset" style="text-align:right;padding:15px;border-top:1px #eee solid;">
+			<button id="xifusubmit" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button">
+				<span class="ui-button-text">确定</span>
+			</button>
+			<button id="xifucancel" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button">
+				<span class="ui-button-text">取消</span>
+			</button>
+		</div>
+	</div>
+	
+	<div id="keyboardpannel" class="ui-dialog" style="position:absolute;z-index:1102;width:520px;height:550px;overflow-y:auto;overflow-x:hidden;background:#fff;right:161px;left:auto;top:50px;border:1px #e0e0e0 solid;display:none;">
+		<ul class="setform">
+			<li>
+				<label>撤销上次动作：</label>
+				<input class="setinput" type="text" value="Ctrl+z" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>重做上次动作：</label>
+				<input class="setinput" type="text" value="Ctrl+y" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>复制应用：</label>
+				<input class="setinput" type="text" value="Ctrl+c" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>粘贴应用：</label>
+				<input class="setinput" type="text" value="Ctrl+v" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>删除应用：</label>
+				<input class="setinput" type="text" value="Delete" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>剪切应用：</label>
+				<input class="setinput" type="text" value="Ctrl+x" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>全选应用：</label>
+				<input class="setinput" type="text" value="Ctrl+a" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>保存：</label>
+				<input class="setinput" type="text" value="Ctrl+s" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>显示/隐藏标尺：</label>
+				<input class="setinput" type="text" value="Ctrl+Alt+r" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>鼠绘热区：</label>
+				<input class="setinput" type="text" value="Ctrl+m" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>应用框选：</label>
+				<input class="setinput" type="text" value="Ctrl+u" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>应用多选：</label>
+				<input class="setinput" type="text" value="Ctrl+鼠标左键单击应用" readonly style="background:#f2f2f2;">
+			</li>
+			<li>
+				<label>只允许横向/纵向拖动：</label>
+				<input class="setinput" type="text" value="按住Shift拖动应用" readonly style="background:#f2f2f2;">
+			</li>
+		</ul>
+		<div class="ui-dialog-buttonset" style="text-align:right;padding:15px;border-top:1px #eee solid;">
+			<button id="keyboardcancel" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button">
+				<span class="ui-button-text">关闭</span>
+			</button>
+		</div>
+	</div>
+	<div id="userdialog" title="六月设计客户登录/注册" style="display:none;">
+		<div id="usertabs">
+			<ul>
+				<li><a href="#logintab">登录</a></li>
+				<li><a href="#regtab">注册</a></li>
+			</ul>
+			<div id="logintab">
+				<ul class="setform">
+					<li>
+						<label for="username">用户名：</label>
+						<input id="username" class="setinput" type="text">
+					</li>
+					<li>
+						<label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+						<input id="password" class="setinput" type="password">
+					</li>
+				</ul>
+			</div>
+			<div id="regtab">
+				<ul class="setform">
+					<li>
+						<label for="rusername">用户名：</label>
+						<input id="rusername" class="setinput" type="text">
+					</li>
+					<li>
+						<label for="rpassword">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+						<input id="rpassword" class="setinput" type="password">
+					</li>
+					<li>
+						<label for="rpassword2">再次输入密码：</label>
+						<input id="rpassword2" class="setinput" type="password">
+					</li>
+					<li>
+						<label for="rlicense">注册码：</label>
+						<input id="rlicense" class="setinput" type="text" title="请联系 junezx 的旺旺客服获取注册码">
+						<a class="lianxi june-preview" href="http://amos.alicdn.com/getcid.aw?v=2&uid=junezx&site=cntaobao&s=2&groupid=0&charset=utf-8" target="_blank"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<form id="previewForm" name="previewForm" action="preview.php" method="POST" target="_blank">
+		<textarea name="code"></textarea>
+	</form>
+	<div id="tSaveList" title="保存列表" style="display:none;">
+		<ul>
+			
+		</ul>
+		<div id="tSavePage" style="width:400px;height:40px;"></div>
+	</div>
+	<div id="tZuhe" title="有趣的效果组合列表" style="display:none;">
+		<ul class="zuhebox">
+		</ul>
+		<div id="tZuhePage" style="width:400px;height:40px;"></div>
+	</div>
+	<div id="ft"></div>
+<script type="text/javascript" src="js/a.js"></script>
+<script type="text/javascript" src="js/b.js"></script>
+<script type="text/javascript" src="js/c.js"></script>
+<script type="text/javascript" src="js/d.js"></script>
+<script type="text/javascript" src="js/lib/e.js"></script>
+<script type="text/javascript" src="js/lib/r.js"></script>
+<script type="text/javascript" src="js/f.js"></script>
+<!--更多工具-->
+<script type="text/javascript" src="js/moretools.js"></script>
+<script type="text/javascript" src="js/g.js"></script>
+<script type="text/javascript" src="js/h.js"></script>
+<script type="text/javascript" src="jdtool/js/jdh.js"></script>
+<script type="text/javascript" src="jdtool/js/jdi.js"></script>
+<script type="text/javascript" src="js/s.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/n.js"></script>
+<script language="javascript" type="text/javascript" src="js/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="js/o.js"></script>
+<script type="text/javascript" src="js/p.js"></script>
+
+<script type="text/javascript" src="js/j/k.js"></script>
+<script type="text/javascript" src="js/j/l.js"></script>
+<script type="text/javascript" src="js/j/m.js"></script>
+<script type="text/javascript">
+ if(Sys.ie) {
+	var ieVersion = parseInt(Sys.ie);
+	if( ieVersion > 8 ) {
+		var evt         = new Event(),
+		dragdrop    = new Dragdrop(evt),
+		rg          = new RulersGuides(evt, dragdrop);
+	}
+ } else {
+	var evt         = new Event(),
+	dragdrop    = new Dragdrop(evt),
+	rg          = new RulersGuides(evt, dragdrop);
+ }
+</script>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253542339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253542339' type='text/javascript'%3E%3C/script%3E"));
+$(function(){
+	$("#cnzz_stat_icon_1253542339").css("display","none");
+});
+</script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="js/ie.js"></script>
+<![endif]-->
+</body>
+</html>

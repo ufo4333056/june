@@ -1,0 +1,459 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>六月设计 JUNEZX 模板装修辅助工具2.0 POWER BY junezx</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="renderer" content="webkit">
+<link type="text/css" rel="stylesheet" href="css/a.css" />
+<link type="text/css" rel="stylesheet" href="css/c.css" />
+<link type="text/css" rel="stylesheet" href="css/d.css" />
+
+<style>
+#boxRepeat, #boxFixed{
+float:none;
+}
+body, button, input, select, textarea{
+	font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+.navtitle{
+	height:100px;
+	line-height:100px;
+	text-indent:20px;
+	font-size:20px;
+	font-family:微软雅黑;
+	background:#f2f4f8;
+	color:#333;
+}
+.navul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	background:#f2f4f8;
+	padding-left:30px;
+	height:80px;
+}
+.navul .navli{
+	float:left;
+	background:#eee;
+	color:#333;
+	padding:20px 40px;
+	font-size:16px;
+	font-family:微软雅黑;
+	cursor:pointer;
+}
+.navul .navli.active{
+	background:#333;
+	color:#fff;
+}
+.bdian,.cdian{
+	background:#f2f4f8;
+}
+.bdian .bdianlist{
+	width:256px;
+	height:400px;
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	border:18px solid #fff;
+	border-radius: 10px;
+	cursor:pointer;
+	box-shadow: 0 0 3px rgba(0,0,0,.06), 1px 2px 15px rgba(0,0,0,.19);
+	-webkit-transition: .5s ease-in;
+	-moz-transition: .5s ease-in;
+	-o-transition: .5s ease-in;
+	transition: .5s ease-in;
+}
+.bdian .bdianlist:hover{
+	border-color:#333;
+}
+.cdian .cdianlist{
+	width:256px;
+	height:400px;
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	border:18px solid #fff;
+	border-radius: 10px;
+	cursor:pointer;
+	box-shadow: 0 0 3px rgba(0,0,0,.06), 1px 2px 15px rgba(0,0,0,.19);
+	-webkit-transition: .5s ease-in;
+	-moz-transition: .5s ease-in;
+	-o-transition: .5s ease-in;
+	transition: .5s ease-in;
+}
+.cdian .cdianlist:hover{
+	border-color:#333;
+}
+.t-tabs-li {
+	display:inline-block;
+	padding:10px 30px;
+	cursor:pointer;
+	text-align:center;
+	border:1px solid #666;
+	background:#efefef;
+}
+.t-tabs-li:hover {
+	background:#dfdfdf;
+}
+.t-tabs-li.active {
+	background:#333;
+	color:#fff;
+	border-color:#333;
+}
+#returnFirst{
+	padding:10px 30px;
+	font-size:14px;
+	background:#333;
+	display:block;
+	width:70px;
+	float:right;
+	position:relative;
+	top:-70px;
+	right:40px;
+	border:1px #111 solid;
+	cursor:pointer;
+	color:#fff;
+}
+#navContent{
+	background:#f2f4f8;
+}
+.mapform{
+	margin:20px 15px;
+	clear:both;
+}
+.mapform .formele{
+	font-size:14px;
+	height:40px;
+	line-height:40px;
+	margin-top:5px;
+	width:475px;
+	float:left;
+}
+.mapform .formele .formlabel{
+	float: left;
+	display:block;
+	width:120px;
+}
+.mapform .formele .forminput{
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px #c2ced6 solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	float: left;
+	margin-left:10px;
+}
+.mapform .formele .formselect{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px #c2ced6 solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	float: left;
+	margin-left:10px;
+}
+
+#chooseLeverForBorder {
+    display: block;
+	background-color:rgba(255,255,255,0.4);
+    border:3px solid rgba(0,0,0,0.6);
+    position:absolute;
+	z-index: 999;
+}
+.tableborder {
+	cursor:pointer;
+}
+.tdborder.active{
+	outline: 3px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 12px rgba(0, 0, 0, 1) inset;
+}
+
+/*用户输入对话框内表单部分*/
+.setform{
+	width:480px;
+	list-style:none;
+	padding:0px;
+}
+.setform li{
+	width:487px;
+	height:50px;
+	line-height:50px;
+}
+.setform li label{
+	font-size:14px;
+	display: inline-block;
+	width:160px;
+	height:40px;
+	line-height:40px;
+	vertical-align: middle;
+	text-align:right;
+	color:#788188;
+	float:left;
+}
+.setform li .setinput{
+	width:200px;
+	height:24px;
+	line-height: 24px;
+	border:1px #c2ced6 solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	float:left;
+}
+.setform li select{
+	width:222px;
+}
+.setform li .disabled {
+	background-color:#e1e1e1;
+	cursor:not-allowed;
+	-moz-user-select:none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	hutia:expression(this.onselectstart=function(){return(false)});
+}
+.setform li .lianxi{
+	display:block;
+	float:left;
+	width:90px;
+	height:26px;
+	background:url(../images/lianxi2.png);
+	margin-top:5px;
+	margin-left:5px;
+}
+.setform li .lianxi:hover{
+	background:url(../images/lianxi.png);
+}
+.setform li input.chkBox{
+	margin-right:0px;
+}
+.setform li label.chkLabel{
+	font-size:12px;
+	width:50px;
+	float:none;
+	line-height:34px;
+}
+.setform li .tItemDialog{
+	height: 36px;
+	line-height: 30px;
+	background: #f9f9f9;
+	border: 1px #dbe2e7 solid;
+	border-color: #dbe2e7;
+	border-bottom-color: #d5dde3;
+	-webkit-box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+	box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+	color:#788188;
+	cursor:pointer;
+}
+.setform li .tItemDialog:hover{
+	background: #efefef;
+}
+
+</style>
+</head>
+<body style="width:100%;height:100%;margin:0 auto;">
+	<div id="hd" style="position:relative;width:352px;">
+		<div id="logo"><a href="http://junezx.com" target="_blank" style="display:block;width:100%;height:100%;"></a></div>
+		<div id="topbanner">
+			<div id="login" style="display:none;"><i></i>登录</div>
+			<div id="loginText"><span id="loginTextName"></span>，欢迎登录！<span id="logout"  data-target="login-clicked" data-loginType="logout"><i></i>注销</span><span id="tSaveListBtn"><i></i>保存列表</span><span id="autoSaveCountdown" style="display:none;"></span></div>
+			<div id="reg" style="display:none;"><i></i>注册</div>
+			<div id="moretools" data-tools="bgfixed" style="right:10px;"></div>
+		</div>
+	</div>
+	<div id="juneBgFixed" style="position:fixed;top:0;width:100%;height:50000px;margin:0 auto;background:url(http://img04.taobaocdn.com/imgextra/i4/39767794/TB2K34MbFXXXXXjXpXXXXXXXXXX-39767794.jpg) top center no-repeat fixed;"></div>
+	<ul id="bd" class="setform" style="position:absolute;height:520px;width:480px;top:25%;margin-top:-40px;left:50%;margin-left:-300px;background:#eee;list-style:none;padding:0px;border:1px #ddd solid;">
+		<li style="margin-top:20px;">
+			<input type="radio" id="modecheck1" name="modecheck" value="1" checked="checked" style="margin-right:0;float:left;margin-top: 14px;margin-left:60px;" />
+			<label for="modecheck1" title="" style="color:#f09090;width:40px;text-align:left;">商城</label>
+			<input type="radio" id="modecheck2" name="modecheck" value="2" style="margin-right:0;float:left;margin-top: 14px;"/>
+			<label for="modecheck2" title="" style="color:#ff9090;width:40px;text-align:left;">C店</label>
+		</li>
+		<li>
+			<label for="moduleWidth">页面正文宽度：</label>
+			<input class="setinput" type="text" id="moduleWidth" name="moduleWidth" value="990" class="textinput"/>
+		</li>
+		<li>
+			<label for="moduleBgimg">模块背景图片：</label>
+			<input class="setinput" type="text" id="moduleBgimg" name="moduleBgimg" class="textinput" value="http://img04.taobaocdn.com/imgextra/i4/39767794/TB2K34MbFXXXXXjXpXXXXXXXXXX-39767794.jpg"/>
+			<input type="checkbox" id="boxRepeat" name="boxRepeat" value="">
+			<label class="chkLabel" for="boxRepeat" style="font-size:12px;text-align:left;">平铺</label>
+		</li>
+		<li>
+			<label for="moduleBgcolor">模块背景颜色：</label>
+			<input type="text" id="moduleBgcolor" name="moduleBgcolor" class="setinput textinput tColorPicker"/>
+		</li>
+		<li>
+			<label for="bgPosition">背景图片位置：</label>
+			<select class="setinput" id="bgPosition" name="bgPosition" style="height:40px;">
+				<option value="50% 50%">居中</option>
+				<option value="50% 0%" selected="selected">中上</option>
+				<option value="50% 100%">中下</option>
+				<option value="0% 0%">左上</option>
+				<option value="0% 50%">左中</option>
+				<option value="0% 100%">左下</option>
+				<option value="100% 0%">右上</option>
+				<option value="100% 50%">右中</option>
+				<option value="100% 100%">右下</option>
+			</select>
+		</li>
+		
+		<li style="height:55px;line-height:20px;width:320px;margin-left:60px;font-family:微软雅黑;color:#999;padding-top:10px;">如果页面中有用到【锚点】功能，请在下面填写整体页面高度；否则，请留空。如果不知道如何填写请联系客服。</li>
+		<li>
+			<label for="moduleHeight">整体页面高度：</label>
+			<input class="setinput" type="text" id="moduleHeight" name="moduleHeight" value="" class="textinput"/>
+		</li>
+		
+		<button type="button" id="genCode" style="width:187px;height:40px;background:#333;color:#fff;margin-left:150px;margin-top:5px;">生成固定背景代码</button>
+		
+		<li style="height:55px;line-height:20px;width:320px;margin-left:60px;font-family:微软雅黑;color:#333;padding-top:10px;">重要提示：生成的代码，需要放在990/950宽度的自定义模块内，可以追加在原有自定义模块的代码最后面。C店的自定义页面无法使用此代码。</li>
+	</ul>
+<script type="text/javascript" src="js/b.js"></script>
+<script type="text/javascript" src="js/f.js"></script>
+<script type="text/javascript" src="js/n.js"></script>
+<!--更多工具-->
+<script type="text/javascript" src="js/moretools.js"></script>
+<script type="text/javascript">
+function tMessage(text, action) {
+		if($("#tMessage").length <= 0) {
+			$('<div id="tMessage"></div>').appendTo( $("body"));
+		}
+		$("#tMessage").dialog({
+			autoOpen: false,
+			width: 400,
+			modal: true,
+			title: "提示",
+			buttons: {
+				"关闭": function() {
+					$(this).dialog("close");
+					if(action == "login") {
+						$("#login").trigger("click");
+					} else if(action == "module") {
+						$(".shezhi").trigger("click");
+						$("#moduleHeight").trigger("focus");
+					}
+				}
+			}
+		}).html('<textarea style="width:360px;margin:0 auto;height:200px;">'+text+'</textarea>').dialog("open");
+	}
+
+$(function(){
+	var juneBgFixed = $("#juneBgFixed");
+	$("#bd").on("change", "input[type='text']", function() {
+		var _t = $(this), name = _t.attr("name"), val = _t.val(), tempDom = juneBgFixed, checkLen = false;
+		if(name == "moduleHeight") {
+			if(_t.val() == "") {
+				var num = 2560;
+				tempDom.height(num);
+			} else {
+				tempDom.height(_t.val());
+			}
+		} else if(name == "moduleBgcolor") {
+			if(_t.val() == "") {
+				tempDom.css("background-color", "#F2F4F8");
+			} else {
+				tempDom.css("background-color", _t.val());
+			}
+		} else if(name == "moduleBgimg") {
+			val = val.replace(/"/g, "");
+			if(val == "") {
+				tempDom.css("background-image", "none");
+			} else {
+				tempDom.css({
+					backgroundImage: "url("+val+")"
+				});
+			}
+		}
+	}).on("keyup", "input[type='text']", function() {
+		var _t = $(this), name = _t.attr("name"), val = _t.val(), tempDom = juneBgFixed, checkLen = false;
+		if(name == "moduleHeight") {
+			if(_t.val() == "") {
+				var num = 2560;
+				tempDom.height(num);
+			} else {
+				tempDom.height(_t.val());
+			}
+		} else if(name == "moduleBgcolor") {
+			if(_t.val() == "") {
+				tempDom.css("background-color", "#F2F4F8");
+			} else {
+				tempDom.css("background-color", _t.val());
+			}
+		} else if(name == "moduleBgimg") {
+			val = val.replace(/"/g, "");
+			if(val == "") {
+				tempDom.css("background-image", "none");
+			} else {
+				tempDom.css({
+					backgroundImage: "url("+val+")"
+				});
+			}
+		}
+	}).on("change", "input[type='radio']", function() {
+		var _t = $(this), name = _t.attr("id"), val = _t.val(), tempDom = juneBgFixed;
+		if(name == "modecheck2") {
+			$("#moduleWidth").val(950);
+		} else {
+			$("#moduleWidth").val(990);
+		}
+	}).on("change", "input[type='checkbox']", function() {
+		var _t = $(this), name = _t.attr("name"), val = _t.val(), tempDom = juneBgFixed;
+		if(name == "boxRepeat") {
+			if(_t.is(":checked")) {
+				tempDom.css({
+					backgroundRepeat: "repeat"
+				});
+			} else {
+				tempDom.css({
+					backgroundRepeat: "no-repeat"
+				});
+			}
+		}
+	}).on("change", "select[name='bgPosition']", function() {
+		var _t = $(this), name = _t.attr("name"), val = _t.val(), tempDom = juneBgFixed;
+		tempDom.css({
+			backgroundPosition: val
+		})
+	});
+	//<div class="junefixbg abs"  data-title="power by junezx 2.0" style="width:1920px;top:0px;left:-465px;height:20000px;background:url(http://img01.taobaocdn.com/imgextra/i1/39767794/TB28I_vbXXXXXaMXXXXXXXXXXXX-39767794.png) top center no-repeat fixed;"></div>
+	
+	$("#genCode").on("click", function() {
+		var img = $("#moduleBgimg").val(), pos = $("#bgPosition").val(), height = $("#moduleHeight").val(), width = ( 1920 - $("#moduleWidth").val() ) / 2, left = 465, bgColor = $("#moduleBgcolor").val();
+		if(height && height !="") {
+			height = parseInt(height, 10);
+		} else {
+			height = 50000;
+		}
+		if($("#modecheck2").prop("checked")) {
+			left = 485;
+		}
+		if(img == "" && bgColor == "") {
+			alert("请填入背景图片地址或背景颜色");
+			return;
+		}
+		bgColor != "" && ( bgColor = 'background-color:'+bgColor+';' );
+		var code = '<div class="junefixbg abs"  data-title="power by junezx 2.0" style="width:'+width+'px;top:0px;left:-'+left+'px;height:'+height+'px;background:url('+img+') '+pos+' no-repeat fixed;'+bgColor+'"></div><div class="junefixbg abs"  data-title="power by junezx 2.0" style="width:'+width+'px;top:0px;left:auto;right:-'+left+'px;height:'+height+'px;background:url('+img+') '+pos+' no-repeat fixed;'+bgColor+'"></div>';
+		tMessage(code);
+	});
+	$(".tColorPicker").ColorPicker({
+		onSubmit: function(hsb, hex, rgb, el) {
+			$(el).val(hex);
+			$(el).ColorPickerHide();
+		},
+		onBeforeShow: function () {
+			$(this).ColorPickerSetColor(this.value);
+		},onChange: function (hsb, hex, rgb, el) {
+			$(el).val('#' + hex);
+			juneBgFixed.css("background-color", '#' + hex);
+		}
+	}).on("keyup", function(){
+		$(this).ColorPickerSetColor(this.value);
+	});
+});
+</script>
+</body>
